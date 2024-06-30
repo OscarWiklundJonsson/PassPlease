@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PassPlease? - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Dashboard - {{ username }}</h1>
+                <canvas id="totalPasswordsChart"></canvas>
+                <!-- Add more canvases for more graphs here -->
+                <div class="mt-4">
+                    <h4>Generate Password</h4>
+                    <div class="input-group">
+                            <input type="text" id="passwordField" class="form-control" readonly style="width: 100%;">                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="generatePasswordButton">Generate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h4>Add Password</h4>
+                    <form id="addPasswordForm">
+                        <div class="form-group">
+                            <label for="accountName">Account Name</label>
+                            <input type="text" class="form-control" id="accountName" name="accountName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="websiteURL">Website URL</label>
+                            <input type="text" class="form-control" id="websiteURL" name="websiteURL" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea class="form-control" id="notes" name="notes"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Password</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- New Section -->
+            <div class="mt-4">
+                <h4>Search Passwords</h4>
+                <form id="searchForm">
+                    <div class="form-group">
+                        <label for="searchWebsiteURL">Website URL</label>
+                        <input type="text" class="form-control" id="searchWebsiteURL" name="searchWebsiteURL" placeholder="Search for Website URL">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <div id="searchResults"></div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../static/js/graphs.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/passwordhandler.js"></script>
+    <script src="../static/js/search.js"></script>
+
+</body>
+</html>
