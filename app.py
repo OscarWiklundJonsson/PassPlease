@@ -12,6 +12,13 @@ app.secret_key = '#qvFSp5A(ziSJ%BI$Q5vaB)|c6jKCCO,?-I_Fs@|h#yX<kdek4RyP0^urB~/z<
 def main_page():
     return render_template('index.html')
 
+@app.route('/privacy')
+def privacy_page():
+    return render_template('privacy.html')
+
+@app.route('/terms')
+def terms_page():
+    return render_template('terms.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

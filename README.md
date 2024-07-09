@@ -86,6 +86,10 @@ It is a simple password manager that uses a master account to encrypt and decryp
 - **Hash Passwords**: Hash all the passwords in the database (currently, only the master password is hashed).
 
 ---
+## What's New?
+- *2024-07-09*: Mostly UI stuff. Templates and such.
+
+---
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
