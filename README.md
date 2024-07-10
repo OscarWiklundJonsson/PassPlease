@@ -84,6 +84,7 @@ It is a simple password manager that uses a master account to encrypt and decryp
 - **Export Passwords**: Add a feature to export passwords to a file.
 - **Import Passwords**: Add a feature to import passwords from a file.
 - **Hash Passwords**: Hash all the passwords in the database (currently, only the master password is hashed).
+- **Temporary Emails and "fake" information**: Temp Emails and Faked information used for sites you don't trust.
 
 ---
 ## What's New?
