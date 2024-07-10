@@ -88,6 +88,7 @@ It is a simple password manager that uses a master account to encrypt and decryp
 ---
 ## What's New?
 - *2024-07-09*: Mostly UI stuff. Templates and such.
+- *2024-07-10*: Started work with fake/temp service. 
 
 ---
 ## License
