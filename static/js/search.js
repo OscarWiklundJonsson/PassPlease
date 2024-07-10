@@ -1,12 +1,9 @@
 document.getElementById('searchForm').addEventListener('submit', function(event) {
-    // Prevent the form from being submitted normally
     event.preventDefault();
 
-    // Get form data
-    var websiteURL = document.getElementById('searchWebsiteURL').value;
+    const websiteURL = document.getElementById('searchWebsiteURL').value;
 
-    // Create a FormData object
-    var formData = new FormData();
+    const formData = new FormData();
     formData.append('searchWebsiteURL', websiteURL);
 
     // Send a POST request to the server
@@ -17,13 +14,13 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
     .then(response => response.json())
     .then(data => {
         // Create a table
-        var table = document.createElement('table');
+        const table = document.createElement('table');
         table.className = 'table';
 
         // Create table header
-        var thead = document.createElement('thead');
-        var headerRow = document.createElement('tr');
-        var headers = ['Account Name', 'Website URL', 'Password', 'Notes'];
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        const headers = ['Account Name', 'Website URL', 'Password', 'Notes'];
         headers.forEach(header => {
             var th = document.createElement('th');
             th.textContent = header;
@@ -32,12 +29,11 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
         thead.appendChild(headerRow);
         table.appendChild(thead);
 
-        // Create table body
-        var tbody = document.createElement('tbody');
+        const tbody = document.createElement('tbody');
         data.forEach(row => {
-            var tr = document.createElement('tr');
+            const tr = document.createElement('tr');
             row.forEach(cell => {
-                var td = document.createElement('td');
+                const td = document.createElement('td');
                 td.textContent = cell;
                 tr.appendChild(td);
             });
@@ -45,8 +41,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
         });
         table.appendChild(tbody);
 
-        // Insert the table into the DOM
-        var searchResultsDiv = document.getElementById('searchResults');
+        const searchResultsDiv = document.getElementById('searchResults');
         searchResultsDiv.innerHTML = '';  // Clear previous search results
         searchResultsDiv.appendChild(table);
     })

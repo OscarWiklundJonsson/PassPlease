@@ -4,6 +4,7 @@ from werkzeug.security import check_password_hash
 
 from functions import generate_password
 from database import database_handler
+import functions.generators as g
 
 app = Flask(__name__)
 app.secret_key = '#qvFSp5A(ziSJ%BI$Q5vaB)|c6jKCCO,?-I_Fs@|h#yX<kdek4RyP0^urB~/z<D'
@@ -67,9 +68,24 @@ def login():
             return "Incorrect username or password", 401
     else:
         return render_template('login.html')
+
+
+@app.route('/logout')
+def logout():
+    # Clear the session
+    session.clear()
+    return redirect(url_for('login'))
+
+
 @app.route('/dashboard')
 def dashboard():
-    username = session.get('username', 'User')  # Get username from session, default to 'User' if not found
+    # Check if user is logged in
+    if 'user_id' not in session:
+        # If not logged in, redirect to login page
+        return redirect(url_for('login'))
+
+    # If logged in, get the username from the session and proceed
+    username = session.get('username', 'User')  # Default to 'User' if not found
     return render_template('dashboard.html', username=username)
 
 
@@ -132,6 +148,24 @@ def get_password_data():
     results = database_handler.get_password_data(user_id)
 
     return jsonify(results)
+
+
+# Temp services #
+
+@app.route('/temp-services')
+def temp_services():
+    return render_template('temp_services.html')
+
+@app.route('/temp-services/name', methods=['GET'])
+def temp_service_name():
+    name = g.generate_name(gender="any")
+    return jsonify({"name": name})
+
+@app.route('/temp-services/address', methods=['GET'])
+def temp_service_address():
+    address = g.generate_random_address()
+    return jsonify({"address": address})
+
 
 if __name__ == '__main__':
     app.run()

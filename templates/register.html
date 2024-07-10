@@ -5,34 +5,66 @@
     <title>PassPlease? - Register</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../static/js/register.js"></script>
     <script src="../static/js/functions.js"></script>
 
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h2>Register account</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="InputUsername">Username</label>
-                            <input type="text" class="form-control" id="InputUsername" name="username" placeholder="Enter username">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputPassword1">Password</label>
-                            <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="../static/img/logo.png" alt="PassPlease Logo" style="height: 40px;">
+                PassPlease
+            </a>
+        </nav>
+    </header>
+    <main>
+    <div class="content-box">
+        <h2>Register account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="InputUsername">Username</label>
+                    <input type="text" class="form-control" id="InputUsername" name="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword1">Password</label>
+                    <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    </div>
+    </main>
+
+        <footer>
+        <div class="footer-content">
+            <div>
+                <h5>About Us</h5>
+                <p>Information about the company.</p>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <p><a href="mailto:info@totallynotaemail.xyz">info@.totallynotaemail.xyz</a></p>
+            </div>
+            <div>
+                <h5>Follow Us</h5>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div>
+                <h5>Legal</h5>
+                <p><a href="/terms">Terms & Conditions</a></p>
+                <p><a href="/privacy">Privacy Policy</a></p>
             </div>
         </div>
-    </div>
+        <p>Made with ❤ from Gotland</p>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

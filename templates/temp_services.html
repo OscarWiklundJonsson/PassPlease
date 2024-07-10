@@ -6,11 +6,11 @@
     <title>PassPlease - Tempservices</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
                 <img src="../static/img/logo.png" alt="PassPlease Logo" style="height: 40px;">
                 PassPlease
@@ -20,29 +20,28 @@
     <main>
         <div class="content-box">
             <h1>Temp-Services</h1>
-            <p>Tools to generate and create temporary user-infromation. Such as emails, names, adresses and much more.</p>
+            <p>Tools to generate and create temporary user-information. Such as emails, names, addresses and much more.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
         </div>
-        <div class="generator-box">
+        <!-- Wrap generator content in a div with class "content-box" -->
+        <div class="content-box">
             <h2>Name and Address generator</h2>
             <div class="generator-content">
                 <div class="generator">
                     <h3>Generate Name</h3>
                     <p>Generate a random name.</p>
-                    <a href="/temp-services/name">Generate</a>
+                    <button id="generate-name-btn">Generate</button>
+                    <div id="generated-name" class="generated-content"></div>
                 </div>
                 <div class="generator">
                     <h3>Generate Address</h3>
                     <p>Generate a random address.</p>
-                    <a href="/temp-services/address">Generate</a>
+                    <button id="generate-address-btn">Generate</button>
+                    <div id="generated-address" class="generated-content"></div>
                 </div>
+            </div>
         </div>
-    
-    
     </main>
-
-
-
     <footer>
         <div class="footer-content">
             <div>
@@ -51,7 +50,7 @@
             </div>
             <div>
                 <h5>Contact</h5>
-                <p><a href="mailto:info@totallynotaemail.xyz">info@.totallynotaemail.xyz</a></p>
+                <p><a href="mailto:info@totallynotaemail.xyz">info@totallynotaemail.xyz</a></p>
             </div>
             <div>
                 <h5>Follow Us</h5>
@@ -70,5 +69,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../static/js/temp_serv.js"></script>
 </body>
 </html>

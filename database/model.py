@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime
-from database.database_handler import Base
 
-class Passwords(Base):
+
+class Passwords():
     __tablename__ = 'passwords'
 
     id = Column(Integer, primary_key=True)
