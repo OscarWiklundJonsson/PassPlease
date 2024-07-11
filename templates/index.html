@@ -1,58 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassPlease</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="static/css/style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="../static/img/logo.png" alt="PassPlease Logo" style="height: 40px;">
-                PassPlease
-            </a>
-        </nav>
-    </header>
-    <main>
-        <div class="content-box">
-            <h1>Welcome to PassPlease</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-            <div>
-                <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="/register" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Register</a>
-            </div>
+{% extends "base.html" %}
+
+{% block title %}Welcome to PassPlease{% endblock %}
+
+{% block content %}
+<main>
+    <div class="content-box">
+        <h1>Welcome to PassPlease</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        <div>
+            <a href="/login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="/register" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Register</a>
         </div>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h5>About Us</h5>
-                <p>Information about the company.</p>
-            </div>
-            <div>
-                <h5>Contact</h5>
-                <p><a href="mailto:info@totallynotaemail.xyz">info@.totallynotaemail.xyz</a></p>
-            </div>
-            <div>
-                <h5>Follow Us</h5>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div>
-                <h5>Legal</h5>
-                <p><a href="/terms">Terms & Conditions</a></p>
-                <p><a href="/privacy">Privacy Policy</a></p>
-            </div>
-        </div>
-        <p>Made with ❤ from Gotland</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+    </div>
+</main>
+{% endblock %}

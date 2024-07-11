@@ -167,5 +167,19 @@ def temp_service_address():
     return jsonify({"address": address})
 
 
+@app.route('/temp-services/id', methods=['GET'])
+def temp_service_id():
+    identity = g.generate_fake_identity('none', 'en_US', 'safe')
+    print (identity)
+    return jsonify(identity)
+
+
+
+# Error handling 404, 500 and so on #
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
 if __name__ == '__main__':
     app.run()

@@ -1,54 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassPlease</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="static/css/style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">
-                <img src="../static/img/logo.png" alt="PassPlease Logo" style="height: 40px;">
-                PassPlease
-            </a>
-        </nav>
-    </header>
-    <main>
-        <div class="content-box">
-            <h1>Terms and Services</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h5>About Us</h5>
-                <p>Information about the company.</p>
-            </div>
-            <div>
-                <h5>Contact</h5>
-                <p><a href="mailto:info@totallynotaemail.xyz">info@.totallynotaemail.xyz</a></p>
-            </div>
-            <div>
-                <h5>Follow Us</h5>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div>
-                <h5>Legal</h5>
-                <p><a href="/terms">Terms & Conditions</a></p>
-                <p><a href="/privacy">Privacy Policy</a></p>
-            </div>
-        </div>
-        <p>Made with ❤ from Gotland</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}PassPlease - Terms{% endblock %}
+
+{% block content %}
+
+<div class="content-box">
+    <h1>Terms and Services</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    <h2>Introduction</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac nisi non ipsum euismod posuere ut ac odio. Donec volutpat mi nec orci interdum, vel eleifend metus volutpat.</p>
+    <h2>Acceptance of Terms</h2>
+    <p>Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.</p>
+    <h2>Modification of Terms</h2>
+    <p>Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum.</p>
+    <h2>User Responsibilities</h2>
+    <p>Maecenas adipiscing ante non diam sodales hendrerit. Nullam ac nisi non ipsum euismod posuere ut ac odio. Donec volutpat mi nec orci interdum, vel eleifend metus volutpat. Integer sit amet turpis non nulla fringilla cursus a vel ex. Nulla facilisi.</p>
+    <h2>Termination</h2>
+    <p>In sed feugiat dui, at facilisis magna. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor.</p>
+    <h2>Governing Law</h2>
+    <p>Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.</p>
+    <h2>Contact Information</h2>
+    <p>If you have any questions about these Terms and Services, please contact us at:</p>
+    <p>Email: terms@example.com</p>
+    <p>Address: 456 Terms St, Legal City, LC 67890</p>
+</div>
+
+{% endblock %}
