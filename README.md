@@ -8,6 +8,7 @@
 - **Generate Strong Passwords**: Create random strong passwords (xkcd style).
 - **View Statistics**: See the number of passwords stored in the database.
 - **Multiple Accounts**: Register multiple accounts with different master passwords and view statistics for each account.
+- **Fake identity / contact details**: Create fake contact details for sites and applications you dont really trust, or for sites you need another account on. 
 
 ## Note This project is for educational purposes only.
 This should not be used. 
