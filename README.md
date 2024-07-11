@@ -10,9 +10,7 @@
 - **Multiple Accounts**: Register multiple accounts with different master passwords and view statistics for each account.
 
 ## Note This project is for educational purposes only.
-This should not be used. 
-It is a simple password manager that uses a master account to encrypt and decrypt passwords. It runs locally on your machine and does not store any data on the cloud. It is a simple project that can be used to learn about basic web development concepts and security practices.
-
+This should not be used for storing actual passwords. The security and testing is just not there yet...
 ---
 
 ## Installation and Running
